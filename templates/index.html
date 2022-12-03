@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+
+        body {
+                  display: flex;
+                  flex-wrap: wrap;
+                  justify-content: space-around;
+                  align-items: center;
+                  align-content: center;
+                    }
+       input{
+                border-color:dodgerBlue;
+                box-shadow:0 0 8px 0 dodgerBlue;
+                }
+      form {
+                 max-width: 300px;
+                 margin: 10px auto;
+                 padding: 10px 20px;
+                 background: #f4f7f8;
+                 border-radius: 8px;
+                }
+
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title> Salary Prediction </title>
+</head>
+<body>
+
+    <div style="color:blue">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h2>Salary Prediction </h2>
+            <h3>Experience</h3>
+            <input id="exp" name="exp" type="number ">
+            <h3>Test_Score</h3><input id="t_score" name="t_score" required="required">
+            <h3>Interview_Score</h3><input id="i_score" name="i_score" required="required">
+            <br><br><button id="submit" type="submit "> Calculate the Salary </button>
+            <br><h3>{{ predict_text }}</h3>
+        </form>
+    </div>
+</body>
+</html>
+
