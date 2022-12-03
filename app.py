@@ -12,7 +12,7 @@ def home():
     return render_template("index.html")
 
 standard_to = StandardScaler()
-@app.route("/predict",methods=['POST'])
+@app.route('/predict',methods=['POST'])
 def predict():
     if request.method=='POST':
         experience =  float(request.form['exp'])
