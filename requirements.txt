@@ -1,5 +1,5 @@
 flask
-python3
+python3.7.10
 numpy
 matplotlib
 seaborn
