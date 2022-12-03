@@ -1,4 +1,5 @@
 import pickle
+import requests
 
 from flask import Flask, render_template,request,jsonify
 from sklearn.preprocessing import StandardScaler
